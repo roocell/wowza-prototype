@@ -21,6 +21,9 @@
 		1CF6ED441C20A29800DA7C6B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6ED431C20A29800DA7C6B /* SettingsViewController.m */; };
 		1CF6ED471C20A2C100DA7C6B /* SettingsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6ED461C20A2C100DA7C6B /* SettingsViewModel.m */; };
 		1CF6ED4A1C20B03500DA7C6B /* SettingsTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6ED491C20B03500DA7C6B /* SettingsTextFieldCell.m */; };
+		7D6848E21DCF862400267B8D /* VideoViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6848E11DCF862400267B8D /* VideoViewerController.m */; };
+		7D6848E41DCF87DB00267B8D /* VideoViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6848E31DCF87DB00267B8D /* VideoViewer.storyboard */; };
+		7D6848E71DCF885600267B8D /* StreamsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6848E61DCF885600267B8D /* StreamsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +64,11 @@
 		1CF6ED481C20B03500DA7C6B /* SettingsTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsTextFieldCell.h; path = ../shared/SettingsTextFieldCell.h; sourceTree = "<group>"; };
 		1CF6ED491C20B03500DA7C6B /* SettingsTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsTextFieldCell.m; path = ../shared/SettingsTextFieldCell.m; sourceTree = "<group>"; };
 		7D6848DF1DCF6F7400267B8D /* PrivateData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateData.h; sourceTree = "<group>"; };
+		7D6848E01DCF862400267B8D /* VideoViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewerController.h; sourceTree = "<group>"; };
+		7D6848E11DCF862400267B8D /* VideoViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewerController.m; sourceTree = "<group>"; };
+		7D6848E31DCF87DB00267B8D /* VideoViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoViewer.storyboard; sourceTree = "<group>"; };
+		7D6848E51DCF885600267B8D /* StreamsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamsTableViewController.h; sourceTree = "<group>"; };
+		7D6848E61DCF885600267B8D /* StreamsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,11 @@
 			isa = PBXGroup;
 			children = (
 				7D6848DF1DCF6F7400267B8D /* PrivateData.h */,
+				7D6848E31DCF87DB00267B8D /* VideoViewer.storyboard */,
+				7D6848E51DCF885600267B8D /* StreamsTableViewController.h */,
+				7D6848E61DCF885600267B8D /* StreamsTableViewController.m */,
+				7D6848E01DCF862400267B8D /* VideoViewerController.h */,
+				7D6848E11DCF862400267B8D /* VideoViewerController.m */,
 				1CE985FE1C1BA2D500A883E3 /* VideoPlayerViewController.h */,
 				1CE985FF1C1BA2D500A883E3 /* VideoPlayerViewController.m */,
 				1CE985FB1C1BA2D500A883E3 /* AppDelegate.h */,
@@ -166,7 +179,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = "Wowza, Inc";
+				ORGANIZATIONNAME = "HQ, Inc";
 				TargetAttributes = {
 					1CE985F41C1BA2D500A883E3 = {
 						CreatedOnToolsVersion = 7.2;
@@ -202,6 +215,7 @@
 				1C305F861C99F6E000AD17F9 /* GoCoderSettings.storyboard in Resources */,
 				1CE986051C1BA2D500A883E3 /* Assets.xcassets in Resources */,
 				1CE986031C1BA2D500A883E3 /* Main.storyboard in Resources */,
+				7D6848E41DCF87DB00267B8D /* VideoViewer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,12 +257,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D6848E21DCF862400267B8D /* VideoViewerController.m in Sources */,
 				1CF6ED471C20A2C100DA7C6B /* SettingsViewModel.m in Sources */,
 				1CE986001C1BA2D500A883E3 /* VideoPlayerViewController.m in Sources */,
 				1CE985FD1C1BA2D500A883E3 /* AppDelegate.m in Sources */,
 				1CE985FA1C1BA2D500A883E3 /* main.m in Sources */,
 				1C1E77721CD0461F00035039 /* MP4Writer.m in Sources */,
 				1CF6ED4A1C20B03500DA7C6B /* SettingsTextFieldCell.m in Sources */,
+				7D6848E71DCF885600267B8D /* StreamsTableViewController.m in Sources */,
 				1CA059FF1C7CE293003B4AAA /* CustomFrameSizeViewController.m in Sources */,
 				1CF6ED441C20A29800DA7C6B /* SettingsViewController.m in Sources */,
 			);

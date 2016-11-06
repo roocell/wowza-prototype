@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G19a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Video Player View Controller-->
@@ -15,10 +19,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMC-Rk-m4x">
+                            <button contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMC-Rk-m4x">
                                 <rect key="frame" x="263" y="505" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="4Ji-Gz-1zP"/>
@@ -29,7 +33,7 @@
                                     <action selector="didTapBroadcastButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M78-3H-L5g"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-fq-Toa">
+                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-fq-Toa">
                                 <rect key="frame" x="535" y="520" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="AaD-cs-3k7"/>
@@ -40,7 +44,7 @@
                                     <action selector="didTapSettingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnq-VP-x1h"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMm-D1-224" userLabel="Switch Camera Button">
+                            <button opaque="NO" contentMode="center" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMm-D1-224" userLabel="Switch Camera Button">
                                 <rect key="frame" x="25" y="520" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="2mw-uP-rwR"/>
@@ -52,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fe0-Ba-MDc" userLabel="Torch Button">
-                                <rect key="frame" x="25" y="35" width="45" height="45"/>
+                                <rect key="frame" x="21" y="35" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="AN6-yJ-vf7"/>
                                     <constraint firstAttribute="width" constant="45" id="L4h-Ev-QFR"/>
@@ -63,7 +67,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9O-5P-CN0" userLabel="Mic Button">
-                                <rect key="frame" x="70" y="35" width="45" height="45"/>
+                                <rect key="frame" x="66" y="35" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="XdD-CJ-lXC"/>
                                     <constraint firstAttribute="height" constant="45" id="y6G-r4-GfY"/>
@@ -73,19 +77,30 @@
                                     <action selector="didTapMicButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dr2-f2-CIl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wq-SI-3Vf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wq-SI-3Vf">
                                 <rect key="frame" x="260" y="457" width="80" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.40002985668789809" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40002985668789809" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9aU-oN-E06"/>
                                     <constraint firstAttribute="width" constant="80" id="oBS-Xn-Pve"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="center" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMO-UP-FX1" userLabel="Streams Button">
+                                <rect key="frame" x="138" y="35" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="JlQ-KX-yvp"/>
+                                    <constraint firstAttribute="height" constant="45" id="oye-qU-9i7"/>
+                                </constraints>
+                                <state key="normal" image="mic_on_button"/>
+                                <connections>
+                                    <action selector="didTapStreamsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QXs-on-tIW"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.36470588235294116" green="0.37647058823529411" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.36470588235294116" green="0.37647058823529411" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IMC-Rk-m4x" secondAttribute="bottom" constant="20" id="7Po-XY-dcr"/>
                             <constraint firstItem="Fe0-Ba-MDc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="8LR-hv-3du"/>
@@ -104,8 +119,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="aDQ-gU-M1d"/>
                                 <exclude reference="Hev-5K-8HS"/>
+                                <exclude reference="aDQ-gU-M1d"/>
                             </mask>
                         </variation>
                     </view>
@@ -113,6 +128,7 @@
                         <outlet property="broadcastButton" destination="IMC-Rk-m4x" id="ZyO-o3-ISu"/>
                         <outlet property="micButton" destination="r9O-5P-CN0" id="w6T-7D-Brk"/>
                         <outlet property="settingsButton" destination="bcO-fq-Toa" id="Pgr-uR-6lX"/>
+                        <outlet property="streamButton" destination="VMO-UP-FX1" id="P69-6k-5gi"/>
                         <outlet property="switchCameraButton" destination="BMm-D1-224" id="wvk-Qo-Ddh"/>
                         <outlet property="timeLabel" destination="6wq-SI-3Vf" id="ik9-XT-UPK"/>
                         <outlet property="torchButton" destination="Fe0-Ba-MDc" id="wPr-Au-hpI"/>

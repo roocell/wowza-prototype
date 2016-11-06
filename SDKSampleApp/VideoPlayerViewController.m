@@ -14,6 +14,7 @@
 #import "SettingsViewController.h"
 #import "MP4Writer.h"
 #import "PrivateData.h"
+#import "StreamsTableViewController.h"
 
 #pragma mark VideoPlayerViewController (GoCoder SDK Sample App) -
 
@@ -27,6 +28,7 @@ static NSString *const SDKSampleSavedConfigKey = @"SDKSampleSavedConfigKey";
 @property (nonatomic, weak) IBOutlet UIButton           *switchCameraButton;
 @property (nonatomic, weak) IBOutlet UIButton           *torchButton;
 @property (nonatomic, weak) IBOutlet UIButton           *micButton;
+@property (nonatomic, weak) IBOutlet UIButton           *streamButton;
 @property (weak, nonatomic) IBOutlet UILabel            *timeLabel;
 
 #pragma mark - GoCoder SDK Components
@@ -238,6 +240,16 @@ static NSString *const SDKSampleSavedConfigKey = @"SDKSampleSavedConfigKey";
     [self presentViewController:settingsNavigationController animated:YES completion:NULL];
 }
 
+- (IBAction) didTapStreamsButton:(id)sender {
+    UIViewController *videoViewerNavigationController = [[UIStoryboard storyboardWithName:@"VideoViewer" bundle:nil] instantiateViewControllerWithIdentifier:@"videoViewerNavigationController"];
+    
+    StreamsTableViewController *streamVC =(StreamsTableViewController *)(((UINavigationController *)videoViewerNavigationController).topViewController);
+    
+    [streamVC getStreams];
+    
+    [self presentViewController:videoViewerNavigationController animated:YES completion:NULL];
+}
+
 
 #pragma mark - Instance Methods
 
@@ -252,6 +264,8 @@ static NSString *const SDKSampleSavedConfigKey = @"SDKSampleSavedConfigKey";
         self.settingsButton.enabled     = NO;
         self.micButton.hidden           = YES;
         self.micButton.enabled          = NO;
+        self.streamButton.hidden        = YES;
+        self.streamButton.enabled       = NO;
     } else {
         // Set the UI control state based on the streaming broadcast status, configuration,
         // and device capability
@@ -263,6 +277,8 @@ static NSString *const SDKSampleSavedConfigKey = @"SDKSampleSavedConfigKey";
         // in the GoCoder SDK configuration setiings
         self.micButton.enabled          = self.goCoder.isStreaming && self.goCoderConfig.audioEnabled;
         self.micButton.hidden           = !self.micButton.enabled;
+        self.streamButton.hidden        = NO;
+        self.streamButton.enabled       = YES;
     }
 }
 
